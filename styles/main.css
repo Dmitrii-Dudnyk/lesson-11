@@ -359,14 +359,15 @@
 }
 
 .team__cards-text {
-	margin: 0 30px;
+	margin: 40px 30px 55px;
 }
 
 .team__cards-title {
-	margin: 40px 0 7px;
+	margin-bottom: 7px;
 }
 
 .team__cards-subtitle {
+	margin-bottom: 15px;
 	letter-spacing: 1.8px;
 	text-transform: uppercase;
 	font-weight: 500;
@@ -374,14 +375,13 @@
 }
 
 .team__cards-description {
-	margin: 15px 0 30px;
+	margin-bottom: 30px;
 }
 
 .team__cards-icons {
 	display: flex;
 	justify-content: center;
 	gap: 15px;
-	margin-bottom: 55px;
 }
 
 .team__link-icon {
