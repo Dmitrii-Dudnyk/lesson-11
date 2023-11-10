@@ -355,8 +355,7 @@
 }
 
 .team__cards-img {
-	padding: 105px 30px 115px;
-	background: #F9F9FF;
+	max-width: 100%;
 }
 
 .team__cards-text {
