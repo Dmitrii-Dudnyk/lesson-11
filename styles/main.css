@@ -98,6 +98,11 @@
 	border-color: #A4A2C4;
 }
 
+.button_primary-icon {
+	margin-left: 8px;
+	stroke: currentColor;
+}
+
 .button_secondary {
 	color: var(--primary-color);
     background-color: #fff;
@@ -118,24 +123,25 @@
 	align-items: center;
 	border: none;
 	color: #8D8BA7;
+	background-color: #F2F1FA;
 	text-align: center;
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 1;
 }
 
-.button-icon {
-	margin-left: 8px;
+.button-minor__icon {
+	margin-left: 6px;
 	stroke: currentColor;
 }
 
 .button-minor:hover,
-.button-icon:hover {
+.button-minor__icon:hover {
     color: var(--primary-color);
 }
 
 .button-minor:active,
-.button-icon:active {
+.button-minor__icon:active {
     color: #1500FF
 }
 
@@ -148,16 +154,13 @@
 .header-nav__list {
 	display: flex;
 	align-items: center;
+	gap: 30px;
 	list-style: none;
 }
 
 .header-nav__link {
 	color: var(--primary-color);
 	text-decoration: none;
-}
-
-.header-nav__item:not(:last-child) {
-	margin-right: 30px;
 }
 
 .header-nav__item_logo {
@@ -187,6 +190,7 @@
 	width: 50%;
 	max-width: 575px;
 	margin-left: 15px;
+	padding: 15px 0;
 }
 
 .intro__img-wrapper {
@@ -245,7 +249,8 @@
 }
 
 .results__title {
-	max-width: 250px;
+	max-width: 265px;
+	padding: 15px 15px 15px 0;
 }
 
 .results__content {
@@ -268,6 +273,7 @@
 	justify-content: center;
 	width: 50%;
 	min-height: 270px;
+	padding: 15px;
 	text-align: center;
 }
 
@@ -275,8 +281,8 @@
 	border-right: 1px solid #D4D2E3;
 }
 
-.results__item:nth-child(2n+1),
-.results__item:nth-child(2n+2) {
+.results__item:nth-child(2n+3),
+.results__item:nth-child(2n+4) {
 	border-top: 1px solid #D4D2E3;
 }
 
@@ -304,6 +310,7 @@
 	width: 50%;
 	max-width: 510px;
 	margin-right: 15px;
+	padding: 15px 0;
 }
 
 .get-started__description {
@@ -318,12 +325,12 @@
 
 .get-started__img-wrapper {
 	width: 50%;
+	text-align: right;
 	line-height: 0;
 }
 
 .get-started__img {
 	max-width: 100%;
-	height: auto;
 }
 
 .team {
@@ -347,26 +354,34 @@
 	gap: 30px;
 }
 
-.team__cards-item {
+.team__card-item {
 	width: calc(33.3% - 20px);
 	text-align: center;
 	border-radius: 20px;
 	border: 1px solid #D4D2E3;
+	overflow: hidden;
 }
 
-.team__cards-img {
+.team__card-img-wrapper {
+	line-height: 0;
+}
+
+.team__card-img {
 	max-width: 100%;
 }
 
-.team__cards-text {
-	margin: 40px 30px 55px;
+.team__card-text {
+	display: grid;
+	align-content: space-between;
+	height: calc(100% - 354px);
+	padding: 40px 30px 55px;
 }
 
-.team__cards-title {
+.team__card-title {
 	margin-bottom: 7px;
 }
 
-.team__cards-subtitle {
+.team__card-subtitle {
 	margin-bottom: 15px;
 	letter-spacing: 1.8px;
 	text-transform: uppercase;
@@ -374,32 +389,42 @@
 	line-height: 1.1;
 }
 
-.team__cards-description {
+.team__card-description {
 	margin-bottom: 30px;
 }
 
-.team__cards-icons {
+.social-icons {
 	display: flex;
 	justify-content: center;
 	gap: 15px;
 }
 
-.team__link-icon {
+.social-icon-wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 36px;
 	height: 36px;
 	text-align: center;
+	color: #8d8ba7;
 	background-color: #F2F1FA;
 	border-radius: 8px;
+}
+
+.social-icon-wrapper:hover {
+	color: #F2F1FA;
+	background-color: #5F5C7F;
+}
+
+.social-icon-wrapper:active {
+	color: #fff;
+	background-color: #A4A2C4;
 }
 
 .social-icon {
 	width: 18px;
 	height: 18px;
 	fill: currentColor;
-	color: #8d8ba7;
 }
 
 .payments {
@@ -447,7 +472,7 @@
 }
 
 .video {
-	padding: 100px 0;
+	padding: 90px 0;
 }
 
 .video__content {
@@ -463,7 +488,6 @@
 
 .video__player {
 	max-width: 100%;
-	height: auto;
 	border-radius: 25px 0 0 25px;
 }
 
@@ -471,6 +495,7 @@
 	width: 50%;
 	max-width: 550px;
 	margin-left: 15px;
+	padding: 15px 0;
 }
 
 .video__title {
@@ -521,7 +546,7 @@
 	display: flex;
 }
 
-.cards__apps-item {
+.cards__app-item {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -529,7 +554,7 @@
 	background-color: #F2F1FA;
 }
 
-.cards__apps-item_main {
+.cards__app-item_main {
 	width: 50%;
 	min-height: 565px;
 	flex-direction: column;
@@ -539,7 +564,7 @@
 	text-align: center;
 }
 
-.cards__apps-item_main .cards__icon {
+.cards__app-item_main .cards__icon {
 	margin-bottom: 140px;
 }
 
@@ -550,20 +575,21 @@
 	gap: 30px;
 }
 
-.cards__secondary-apps-item .cards__apps-item {
+.cards__secondary-apps-item .cards__app-item {
+	justify-content: space-between;
 	width: 100%;
-	padding: 60px 50px;
+	padding: 15px 85px 15px 50px;
 }
 
-.cards__apps-text {
+.cards__app-text {
 	margin: 15px 0 35px;
 	color: var(--secondary-color);
 	font-size: 16px;
 }
 
 .cards__wrapper-item {
-	max-width: 270px;
-	margin-right: 100px;
+	max-width: 280px;
+	padding-right: 15px;
 }
 
 .footer {
